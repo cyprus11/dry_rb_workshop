@@ -1,0 +1,2 @@
+dry-rb workshop
+Thinknetica
