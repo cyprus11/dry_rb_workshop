@@ -9,7 +9,7 @@ module HTTP
           query: 'contexts.cat_toy_testing.queries.show_toys_for_test'
         ]
 
-        def call(res, req)
+        def handle(res, req)
           result = query.call(
             account_id: req.params[:id]
           )

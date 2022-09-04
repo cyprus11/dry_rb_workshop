@@ -12,7 +12,7 @@ module HTTP
           command: 'contexts.cat_toy_testing.commands.send_result'
         ]
 
-        def call(req, res)
+        def handle(req, res)
           result = command.call(
             cat_toy_id: req.params[:cat_toy_id],
             account_id: req.params[:account_id],
