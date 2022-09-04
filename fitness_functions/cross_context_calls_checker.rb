@@ -85,3 +85,26 @@ whitelist = %w[
 
 file_path = 'apps/in_memory/transport/testers_accounting_request.rb'
 FitnessFunctions::CrossContextCallsChecker.new.call(file_path, whitelist: whitelist)
+
+puts
+puts '====== HTTP transport layer ======'
+puts
+
+whitelist = %w[
+  hanami.action.configuration
+  contexts.cat_toy_testing.commands
+]
+
+FitnessFunctions::CrossContextCallsChecker.new.call('apps/http/actions/commands/send_result.rb', whitelist: whitelist)
+FitnessFunctions::CrossContextCallsChecker.new.call('apps/http/actions/commands/set_toy_for_testing.rb', whitelist: whitelist)
+
+puts
+puts '****'
+puts
+
+whitelist = %w[
+  hanami.action.configuration
+  contexts.cat_toy_testing.queries
+]
+
+FitnessFunctions::CrossContextCallsChecker.new.call('apps/http/actions/queries/show_toys_for_test.rb', whitelist: whitelist)
