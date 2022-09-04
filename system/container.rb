@@ -2,6 +2,19 @@ require 'dry/system/container'
 require "dry/system/loader/autoloading"
 require "zeitwerk"
 
+require 'dry-types'
+require 'dry/types'
+Dry::Types.load_extensions(:monads)
+
+require 'dry/schema'
+require 'dry-schema'
+Dry::Schema.load_extensions(:monads)
+
+require 'dry-struct'
+
+require 'dry/monads'
+require 'dry/monads/do'
+
 class Container < Dry::System::Container
   use :env, inferrer: -> { ENV.fetch('PROJECT_ENV', :development).to_sym }
   use :zeitwerk

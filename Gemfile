@@ -6,6 +6,15 @@ ruby '3.1.2'
 gem 'dry-system', '0.25'
 gem 'zeitwerk'
 
+# bl
+gem 'dry-monads', '1.3'
+gem 'dry-schema', '1.9'
+gem 'sqlite3'
+
+# pl
+gem 'dry-types', '1.5'
+gem 'dry-struct', '1.0'
+
 # Other
 gem 'bigdecimal', '1.4.2'
 gem 'rake'
